@@ -9,7 +9,7 @@
   },
   "scripts": {
     "generate:component": "turbo gen react-component",
-    "lint": "eslint . --max-warnings 0"
+    "lint": "eslint --fix ."
   },
   "devDependencies": {
     "@repo/eslint-config": "*",

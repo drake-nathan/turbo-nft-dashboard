@@ -1,20 +1,17 @@
 "use client";
 
-import { ReactNode } from "react";
+type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-interface ButtonProps {
-  children: ReactNode;
-  className?: string;
-  appName: string;
-}
-
-export const Button = ({ children, className, appName }: ButtonProps) => {
+export function Button({
+  children,
+  className,
+  type,
+  ...props
+}: ButtonProps): React.JSX.Element {
   return (
-    <button
-      className={className}
-      onClick={() => alert(`Hello from your ${appName} app!`)}
-    >
+    // eslint-disable-next-line react/button-has-type -- The rule doesn't understand dynamic inputs
+    <button className={className} type={type ?? "button"} {...props}>
       {children}
     </button>
   );
-};
+}
