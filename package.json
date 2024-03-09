@@ -1,26 +1,27 @@
 {
   "name": "turbo-nft-dashboard",
   "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
-    "lint": "turbo lint",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "lint": "turbo lint"
   },
   "dependencies": {},
   "devDependencies": {
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
     "prettier": "^3.2.5",
+    "prettier-plugin-packagejson": "^2.4.12",
     "prettier-plugin-sort-json": "^3.1.0",
     "turbo": "^1.12.5"
   },
+  "packageManager": "bun@1.0.30",
   "engines": {
     "node": ">=20"
-  },
-  "packageManager": "bun@1.0.30",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ]
+  }
 }
