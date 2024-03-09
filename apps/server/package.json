@@ -1,0 +1,23 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "bun build src/index.ts",
+    "dev": "bun --watch src/index.ts",
+    "lint": "eslint .",
+    "start": "NODE_ENV=production bun src/index.ts",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "elysia": "^0.8.17"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "@types/eslint": "^8.56.5",
+    "@types/node": "^20.11.25",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.2"
+  }
+}
