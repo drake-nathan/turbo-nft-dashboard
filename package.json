@@ -9,7 +9,8 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "format": "prettier --write .",
-    "lint": "turbo lint"
+    "lint": "turbo lint",
+    "migrate": "npx prisma migrate dev"
   },
   "dependencies": {},
   "devDependencies": {
@@ -23,5 +24,8 @@
   "packageManager": "bun@1.0.30",
   "engines": {
     "node": ">=20"
+  },
+  "prisma": {
+    "schema": "apps/server/src/prisma/schema.prisma"
   }
 }

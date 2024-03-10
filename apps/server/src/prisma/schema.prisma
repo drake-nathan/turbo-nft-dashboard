@@ -1,0 +1,45 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Nft {
+  id              String       @id @default(cuid())
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+  name            String       @unique
+  contractAddress String
+  contractType    ContractType
+  server          Server
+  section         Section
+  tokenId         Int
+  openSeaSlug     String
+  lastSoldDate    DateTime?
+  lastSoldPrice   Decimal?
+  supply          Int?
+  price           Decimal?
+  exclude         Boolean      @default(false)
+  notes           String?
+}
+
+enum ContractType {
+  ERC721
+  ERC1155
+}
+
+enum Server {
+  Degenz
+  RugRadio
+}
+
+enum Section {
+  OsfSeason1
+  OsfSeason2
+}
