@@ -22,6 +22,7 @@ module.exports = {
   rules: {
     "import/no-default-export": "off",
     "import/order": "off",
+    "no-console": ["warn", { allow: ["error", "info"] }],
     "no-unused-vars": "off",
   },
   settings: {

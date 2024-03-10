@@ -26,6 +26,6 @@
     "node": ">=20"
   },
   "prisma": {
-    "schema": "apps/server/src/prisma/schema.prisma"
+    "schema": "apps/server/prisma/schema.prisma"
   }
 }
